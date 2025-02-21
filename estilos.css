@@ -1,0 +1,131 @@
+/* *{
+    margin: 10px;
+} */
+
+.background {
+    /* background-color: rgb(110, 110, 113); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("Post-Apocalyptic\ Sci-Fi_\ HD\ Wallpaper\ of\ a\ Dystopian\ World.jfif");
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.encabezado {
+    /* background-color: rgb(7, 7, 235); */
+    border: 2px solid black;
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+
+.cardLogo {
+    width: 30%;
+    height: 200px;
+    border: 2px solid black;
+}
+
+.cardTitulo {
+    width: 40%;
+    height: 200px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.cardAnimacion {
+    width: 30%;
+    height: 200px;
+    border: 2px solid black;
+}
+
+.contenedorLore{
+    /* background-color: rgb(7, 235, 216); */
+    border: 2px solid black;
+    width: 100%;
+    height: 150px;
+    display: flex;
+}
+
+.boxAnimacion{
+    border: 2px solid black;
+    width: 25%;
+    /* height: 200px; */
+}
+
+.boxInstruciones{
+    border: 2px solid black;
+    width: 25%;
+    /* height: 200px; */
+}
+
+.boxLore{
+    border: 2px solid black;
+    width: 25%;
+    /* height: 200px; */
+}
+
+.boxSonidos{
+    border: 2px solid black;
+    width: 25%;
+    /* height: 200px; */
+}
+
+.containerJugar{
+    width: 500px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    background-color: blueviolet;
+}
+
+.botonPersona{
+    margin: 20px;
+}
+
+.botonMaquina{
+    margin: 20px;
+}
+
+.containerNavegacion{
+    width: 100%;
+    height: 50px;
+    background-color: orange;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+
+.botonRojo {
+    color: red;
+    background-color: rgb(227, 227, 240);
+}
+
+.botonVerde {
+    color: green;
+    /* background-color: rgb(231, 231, 237); */
+}
+
+.botonAzul {
+    color: blue;
+    background-color: rgb(169, 169, 180);
+}
+
+.container {
+    border: 2px solid black;
+}
