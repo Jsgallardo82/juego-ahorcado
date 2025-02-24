@@ -56,7 +56,7 @@
                 <button id="botonReiniciarVictoria">Reiniciar</button>
             </div>
             <div class="menuRegistro">
-                
+                <audio id="clickSound" src="sonidos/deepscanmp3-14662.mp3" preload="auto"></audio>
                 <div class="registroIntentos" id="registroIntentos"></div>
             </div>
         </div>
@@ -98,13 +98,15 @@
         </div>
         
         <div class="containerNavegacion">
-            <button class="buttonFooter"><a href="index.html">    volver </a>
-      
-                <!-- transicion por view  -->
-            </button>
+            <button class="buttonFooter"><a href="index.html">volver</a></button>
             <button class="buttonFooter" id="footer" onclick="location.reload()">Reiniciar</button>
+            <div class="soundControl">
+                <button id="toggleSound" class="buttonFooter" >🔊</button>
+                <audio id="backgroundMusic" src="sonidos/cyberpunk-bass-196030.mp3" preload="auto" autoplay loop></audio>
+            </div>
         </div>
     </div>
     <script src="juegoAhorcado.js"></script>
+    <script src="audio.js"></script>
 </body>
 </html>

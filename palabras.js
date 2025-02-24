@@ -1,0 +1,1 @@
+const palabraMaquina = ["jazz", "blues", "rock","Ovovivíparo","Caleidoscopio","rugby","Desoxirribonucleico", "inteligencia artificial","sevedol", "corazon" ];

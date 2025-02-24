@@ -1,6 +1,7 @@
 .background {
     /* background-color: rgb(110, 110, 113); */
     display: flex;
+    width: 1800px;
     flex-direction: column;
     align-items: center;
     background-image: url("DALL·E\ 2025-02-22\ 14.47.13\ -\ A\ futuristic\ high-tech\ prison\ with\ a\ cyberpunk\ aesthetic.\ The\ design\ should\ feature\ glowing\ neon\ blue\ and\ purple\ lights\,\ metallic\ walls\ with\ holograph.webp");

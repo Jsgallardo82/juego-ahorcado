@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("Post-Apocalyptic\ Sci-Fi_\ HD\ Wallpaper\ of\ a\ Dystopian\ World.jfif");
+    background-image: url("DALL·E\ 2025-02-22\ 14.47.13\ -\ A\ futuristic\ high-tech\ prison\ with\ a\ cyberpunk\ aesthetic.\ The\ design\ should\ feature\ glowing\ neon\ blue\ and\ purple\ lights\,\ metallic\ walls\ with\ holograph.webp");
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -20,6 +20,7 @@
     width: 100%;
     height: 200px;
     display: flex;
+    justify-content: space-around;
 }
 
 .cardLogo {
@@ -29,16 +30,84 @@
 }
 
 .cardTitulo {
-    width: 40%;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border: 2px solid black;
     text-align: center;
+
 }
 
 .cardAnimacion {
     width: 30%;
     height: 200px;
     border: 2px solid black;
+}
+
+.cardAnimacion {
+    width: 450px;
+    height: 350px;
+    /* border: 2px solid black; */
+    background-image: url(fondoengranaje.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 90px;
+    padding-top: 50px;
+    margin-left: 50px;
+}
+
+.autoRotate{
+    animation: autoRotateAndShake 4s linear infinite alternate-reverse;
+    /* animation: autoShakeAnimation 5s linear infinite ; */
+}
+
+.autoShake{
+    animation: autoShakeAnimation 2s linear infinite alternate-reverse;
+}
+
+@keyframes autoRotateAnimation {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+    
+}
+
+@keyframes autoShakeAnimation {
+    0%{
+        opacity: 0.2;
+        transform: translateY(-40px) translateX(-40px);
+    }
+    25% {
+        opacity: 0.8;
+        transform: translateY(-20px) translateX(40px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0px) translateX(-40px);
+    }
+    75% {
+        opacity: 0.8;
+        transform: translateY(20px) translateX(40px);
+    }
+    100% {
+        opacity: 0.2;
+        transform: translateY(40px) translateX(-40px);
+    }
+    
+}
+
+@keyframes autoRotateAndShake {
+    0% {
+        transform: rotate(0deg) translateY(-20px);
+    }
+    50% {
+        transform: rotate(180deg) translateY(0px);
+    }
+    100% {
+        transform: rotate(360deg) translateY(20px);
+    }
 }
 
 .contenedorLore{
@@ -51,20 +120,32 @@
 
 .boxAnimacion{
     border: 2px solid black;
-    width: 25%;
+    width: 100px;
+    margin-left: 55px;
+    margin-top: 10px;
     /* height: 200px; */
 }
 
 .boxInstruciones{
-    border: 2px solid black;
-    width: 25%;
-    /* height: 200px; */
+    width: 500px;
+    height: 280px;
+    background-image: url(DALL·E\ 2025-02-22\ 14.51.37\ -\ A\ high-tech\ futuristic\ background\ designed\ for\ a\ website\ header.\ The\ design\ should\ feature\ glowing\ neon\ blue\ and\ purple\ elements\,\ holographic\ effects\,.webp);
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+    border-radius: 10px;
+    border: 4px solid rgb(195, 5, 125);
+    /* opacity: 0.7; */
 }
 
 .boxLore{
-    border: 2px solid black;
-    width: 25%;
-    /* height: 200px; */
+    width: 500px;
+    height: 280px;
+    background-image: url(fondoinstrucciones.webp);
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+    border-radius: 10px;
+    border: 4px solid rgb(195, 5, 125);
+    /* opacity: 0.7; */
 }
 
 .boxSonidos{
@@ -80,8 +161,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid black;
-    background-color: blueviolet;
+    /* border: 2px solid black; */
+    /* background-color: blueviolet; */
 }
 
 .botonPersona{
@@ -92,40 +173,49 @@
     margin: 20px;
 }
 
-.containerNavegacion{
+/* .containerNavegacion{
     width: 100%;
     height: 50px;
     background-color: orange;
     border: 2px solid black;
     display: flex;
     justify-content: space-around;
+} */
+
+.linkFooter {    display: block; /* Hace que el enlace ocupe todo el ancho disponible */
+    height: 40px;
+    width: 250px;
+    background-color: rgb(118, 65, 131);
+    padding: 0; /* Elimina cualquier relleno adicional */
+    color: cyan;
+    margin: 0 auto; /* Centra el enlace horizontalmente */
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 5px;
+    border: 2px solid cyan;
+    text-align: center; /* Centra el texto horizontalmente */
+    line-height: 40px; /* Centra el texto verticalmente */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    box-sizing: border-box; /* Incluye el borde y el relleno en el tamaño total del elemento */
+}
+
+.linkFooter:hover {
+    background-color: rgb(100, 50, 120); /* Cambia el color de fondo al pasar el ratón */
 }
 
 
-
-
-
-
-
-
-
-
-
-.botonRojo {
-    color: red;
-    background-color: rgb(227, 227, 240);
+.soundControl {
+    /* position: fixed; */
+    bottom: 20px;
+    right: 20px;
 }
 
-.botonVerde {
-    color: green;
-    /* background-color: rgb(231, 231, 237); */
-}
-
-.botonAzul {
-    color: blue;
-    background-color: rgb(169, 169, 180);
-}
-
-.container {
-    border: 2px solid black;
+#toggleSound {
+    background-color: #a208ba;
+    color: #077af5;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
 }

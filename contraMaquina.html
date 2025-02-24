@@ -4,96 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahorcadopersona</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilosmaquina.css">
+    
 </head>
 <body>
     <div class="background">
         <div class="encabezado">
             <div class="cardLogo">
-                aqui va un logo
+                <img class="logo" src="DALL·E 2025-02-22 14.27.15 - A futuristic logo for a game called 'Ahorcado Siglo XXXI'. The design should have a sleek, high-tech aesthetic with neon blue and purple glowing eleme.webp" alt="logo del juego">
             </div>
             <div class="cardTitulo">
-                <h1 class="titulo">Ahorcado vs maquina</h1>
-                <p class="pieParrafo">version del ahorcado Hardcore</p>
+                <h1 class="titulo">Ahorcado Siglo XXXI</h1>
+                <p class="pieParrafo">V.S. Maquina</p>
             </div>
             <div class="cardAnimacion">
-                aqui va animacion
+                <div class="engranajeAnimacion">
+                    <img src="engranajeanima.png" alt="png de engranaje futurista" width="300" height="300" id="imagen">
+                </div>
             </div>
         </div>
         <div class="campoEnemigo">
-                        
+            <!-- <div class="registroEnemigo">
+                <input type="text"  id="palabraEnemiga" class="palabraEnemiga" placeholder="Ingresa la palabra">
+                <button class="ingresarEnemigo" id="ingresarEnemigo">Ingresar</button>            
+            </div> -->
+            <div class="iniciarEnemigo">
+                <button class="botonEmpezar" id="botonIniciar" >Empezar</button>
+            </div>
+            
         </div>
         <div class="containerJuego">
             <div class="cardInstrucciones">
-                <p class="instrucciones">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et facere aliquid labore, quaerat sed similique quam ipsa deleniti minima suscipit quas tempore, nam consequatur praesentium reiciendis. Dignissimos expedita explicabo qui.</p>
+                <div class="divInstrucciones">
+                <p class="instrucciones">
+                    <span>instrucciones</span> <br><br>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et facere aliquid labore, quaerat sed similique quam ipsa deleniti minima suscipit quas tempore, nam consequatur praesentium reiciendis. Dignissimos expedita explicabo qui.</p>
+                </div>
             </div>
             <div class="campoJuego">
-
+                <div class="acido" id="acido">
+                    <div id="relleno"></div>
+                </div>
+            </div>
+            <div id="mensajeDerrota" style="display: none;">
+                <p>Has perdido. Intenta de nuevo.</p>
+                <button id="botonReiniciar">Reiniciar</button>
+            </div>
+            <div id="mensajeVictoria" style="display: none;">
+                <p>¡Felicidades, ganaste!</p>
+                <button id="botonReiniciarVictoria">Reiniciar</button>
             </div>
             <div class="menuRegistro">
-                aqui van datos de la partida
+                <audio id="clickSound" src="sonidos/deepscanmp3-14662.mp3" preload="auto"></audio>
+                <div class="registroIntentos" id="registroIntentos"></div>
             </div>
         </div>
         <div class="boxJugador">
             <div class="cardLetras">
-                <button class="botonLetra">a</button>
-                <button class="botonLetra">b</button>
-                <button class="botonLetra">c</button>
-                <button class="botonLetra">d</button>
-                <button class="botonLetra">e</button>
-                <button class="botonLetra">f</button>
-                <button class="botonLetra">g</button>
-                <button class="botonLetra">h</button>
-                <button class="botonLetra">i</button>
-                <button class="botonLetra">j</button>
-                <button class="botonLetra">k</button>
-                <button class="botonLetra">l</button>
-                <button class="botonLetra">m</button>
-                <button class="botonLetra">n</button>
-                <button class="botonLetra">ñ</button>
-                <button class="botonLetra">o</button>
-                <button class="botonLetra">p</button>
-                <button class="botonLetra">q</button>
-                <button class="botonLetra">r</button>
-                <button class="botonLetra">s</button>
-                <button class="botonLetra">t</button>
-                <button class="botonLetra">u</button>
-                <button class="botonLetra">v</button>
-                <button class="botonLetra">w</button>
-                <button class="botonLetra">x</button>
-                <button class="botonLetra">y</button>
-                <button class="botonLetra">z</button>
+                <button class="botonLetra" disabled>a</button>
+                <button class="botonLetra" disabled>b</button>
+                <button class="botonLetra" disabled>c</button>
+                <button class="botonLetra" disabled>d</button>
+                <button class="botonLetra" disabled>e</button>
+                <button class="botonLetra" disabled>f</button>
+                <button class="botonLetra" disabled>g</button>
+                <button class="botonLetra" disabled>h</button>
+                <button class="botonLetra" disabled>i</button>
+                <button class="botonLetra" disabled>j</button>
+                <button class="botonLetra" disabled>k</button>
+                <button class="botonLetra" disabled>l</button>
+                <button class="botonLetra" disabled>m</button>
+                <button class="botonLetra" disabled>n</button>
+                <button class="botonLetra" disabled>ñ</button>
+                <button class="botonLetra" disabled>o</button>
+                <button class="botonLetra" disabled>p</button>
+                <button class="botonLetra" disabled>q</button>
+                <button class="botonLetra" disabled>r</button>
+                <button class="botonLetra" disabled>s</button>
+                <button class="botonLetra" disabled>t</button>
+                <button class="botonLetra" disabled>u</button>
+                <button class="botonLetra" disabled>v</button>
+                <button class="botonLetra" disabled>w</button>
+                <button class="botonLetra" disabled>x</button>
+                <button class="botonLetra" disabled>y</button>
+                <button class="botonLetra" disabled>z</button>
+                <button class="botonLetra" disabled> </button>
             </div>
             <div class="cardposicion">
-                <input type="number" class="inputposicion"> <button class="intentar">intentar</button>
+                <input type="number" class="inputposicion" placeholder=" # " disabled min="0"> 
+                <p class="intentar">Digite la posicion</p>
             </div>
         </div>
         
         <div class="containerNavegacion">
-            <button><a href="index.html">volver </a>
-                
-                <!-- transicion por view  -->
-            </button>
+            <button class="buttonFooter"><a href="index.html">volver</a></button>
+            <button class="buttonFooter" id="footer" onclick="location.reload()">Reiniciar</button>
+            <div class="soundControl">
+                <button id="toggleSound" class="buttonFooter" >🔊</button>
+                <audio id="backgroundMusic" src="sonidos/cyberpunk-bass-196030.mp3" preload="auto" autoplay loop></audio>
+            </div>
         </div>
-
     </div>
-
-    <h1 id="titulo">Hola, iii mundo</h1>
-    <button  onclick="cambiarTexto()">Haz click</button>
-    
-    <p class="parrafo"> 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, cum? Ab tempora debitis nulla eligendi nemo suscipit illum molestiae nesciunt explicabo animi sequi earum fugit facere, a nobis deleniti. Aliquid!z
-    </p>
-    <div id="contenedor" class="container">
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo quo illo veritatis et, repellendus libero iusto, ab, eligendi expedita veniam unde dolor blanditiis exercitationem possimus delectus! Ut sed fugiat repudiandae.
-        </p>
-    </div>
-    <button class="botonRojo">presioname</button>
-
-    <button id="boton" >presioname</button>
-    <!-- class="botonVerde" -->
-    <button class="botonAzul">presioname</button>
-    <script src="index.js"></script>
+    <script src="juegoAhorcadoMaquina.js"></script>
+    <script src="audio.js"></script>
 </body>
 </html>

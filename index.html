@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahorcado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <div class="background">
         <div class="encabezado">
             <div class="cardLogo">
-                aqui va un logo
+                
             </div>
             <div class="cardTitulo">
-                <h1 class="titulo">Ahorcado</h1>
-                <p class="pieParrafo">version del ahorcado Hardcore</p>
+                <img src="DALL·E 2025-02-22 14.27.15 - A futuristic logo for a game called 'Ahorcado Siglo XXXI'. The design should have a sleek, high-tech aesthetic with neon blue and purple glowing eleme.webp" alt="logo del juego"width="300px" height="300px">
             </div>
             <div class="cardAnimacion">
-                aqui va animacion
+                <div class="engranajeAnimacion">
+                    <img src="engranajeanima.png" alt="png de engranaje futurista" width="300" height="300" id="imagen" class="autoRotate">
+                </div>
             </div>
         </div>
         <div class="contenedorLore">
             <div class="boxAnimacion">
-                aqui va una animacion
+                <img src="bola electricidad.png" alt="electricidad animacion" class="autoShake" width="50px" height="50px">
             </div>
             <div class="boxInstruciones">
                 aqui van las instrucciones de juego
@@ -32,40 +34,28 @@
             </box>
             <div class="boxSonidos">
                 un espacio para los sonidos
+                <audio id="clickSound" src="sonidos/laser-gun-shot-283838.mp3" preload="auto"></audio>
+                <div class="soundControl">
+                    <button id="toggleSound">🔊</button>
+                </div>
             </div>
         </div>
         <div class="containerJugar">
             <div class="botonMaquina">
-                <button class="jugarMaquina"><a href="contraMaquina.html">Contra maquina</a></button>
+                    <a class="linkFooter" href="contraMaquina.html">Contra maquina</a>
             </div>
-            <div class="botonPersona">
-                <button class="jugarPersona"> <a href="contraPersona.html">Contra persona</a></button>
+            <div class="buttonFooter">
+                <a class="linkFooter" href="contraPersona.html">Contra persona</a>
             </div>
+            
         </div>
-        <div class="containerNavegacion">
-            <button>
-                volver
-            </button>
-        </div>
-
+        
     </div>
+    <audio id="backgroundMusic" src="sonidos/cyberpunk-bass-196030.mp3" preload="auto" autoplay loop></audio>
 
-    <h1 id="titulo">Hola, iii mundo</h1>
-    <button  onclick="cambiarTexto()">Haz click</button>
     
-    <p class="parrafo"> 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, cum? Ab tempora debitis nulla eligendi nemo suscipit illum molestiae nesciunt explicabo animi sequi earum fugit facere, a nobis deleniti. Aliquid!z
-    </p>
-    <div id="contenedor" class="container">
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo quo illo veritatis et, repellendus libero iusto, ab, eligendi expedita veniam unde dolor blanditiis exercitationem possimus delectus! Ut sed fugiat repudiandae.
-        </p>
-    </div>
-    <button class="botonRojo">presioname</button>
-
-    <button id="boton" >presioname</button>
-    <!-- class="botonVerde" -->
-    <button class="botonAzul">presioname</button>
+    
     <script src="index.js"></script>
+    <script src="audio.js" ></script>
 </body>
 </html>
