@@ -5,11 +5,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const botonesLetra = document.querySelectorAll('.botonLetra');
     const inputPosicion = document.querySelector('.inputposicion');
     const registroIntentos = document.getElementById('registroIntentos');
+    const mensajeDerrota = document.getElementById('mensajeDerrota');
+    const mensajeVictoria = document.getElementById('mensajeVictoria');
 
     let enemigo = '';
     let solucion = [];
     let letrasCorrectasFueraDePosicion = 0; // Contador para letras correctas fuera de posición
     let letrasIncorrectas = 0; // Contador para letras incorrectas
+
+    
 
     document.getElementById('botonReiniciar').addEventListener('click', function() {
         reiniciarJuego();
@@ -50,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function verificarVictoria() {
         if (solucion.join('') === enemigo) {
             const mensajeVictoria = document.createElement('div');
-            mensajeVictoria.textContent = '¡Felicidades! Has ganado.';
+            mensajeVictoria.textContent = '¡Felicidades, salvaste al prisionero de su muerte!';
             // mensajeVictoria.style.color = 'green';
             mensajeVictoria.classList.add('mensaje-victoria'); // Añadir la clase 'mensaje-victoria'
             registroIntentos.appendChild(mensajeVictoria);
@@ -98,10 +102,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function mostrarMensajeDerrota() {
-        const mensajeDerrota = document.getElementById('mensajeDerrota');
-        mensajeDerrota.style.display = 'block';
-        document.getElementById('palabraEnemiga').disabled = true;
-        document.getElementById('botonIniciar').disabled = true;
+        if (mensajeDerrota) {
+            mensajeDerrota.querySelector('p').textContent = 'El prisionero fue sometido a la pena capital.';
+            mensajeDerrota.style.display = 'block';
+        }
+        inputPalabraEnemiga.disabled = true;
+        botonIniciar.disabled = true;
         inputPosicion.disabled = true;
         botonesLetra.forEach(boton => {
             boton.disabled = true;
@@ -109,10 +115,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function mostrarMensajeVictoria() {
-        const mensajeVictoria = document.getElementById('mensajeVictoria');
-        mensajeVictoria.style.display = 'block';
-        document.getElementById('palabraEnemiga').disabled = true;
-        document.getElementById('botonIniciar').disabled = true;
+        if (mensajeVictoria) {
+            mensajeVictoria.querySelector('p').textContent = '¡Felicidades, salvaste al prisionero de su muerte!';
+            mensajeVictoria.style.display = 'block';
+        }
+        inputPalabraEnemiga.disabled = true;
+        botonIniciar.disabled = true;
         inputPosicion.disabled = true;
         botonesLetra.forEach(boton => {
             boton.disabled = true;

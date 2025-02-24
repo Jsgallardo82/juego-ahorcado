@@ -3,15 +3,36 @@ document.addEventListener('DOMContentLoaded', function() {
     const botonesLetra = document.querySelectorAll('.botonLetra');
     const inputPosicion = document.querySelector('.inputposicion');
     const registroIntentos = document.getElementById('registroIntentos');
+    const mensajeDerrota = document.getElementById('mensajeDerrota');
+    const mensajeVictoria = document.getElementById('mensajeVictoria');
+
     let enemigo = '';
     let solucion = [];
-    let letrasIncorrectas = 0;
+    let letrasCorrectasFueraDePosicion = 0; // Contador para letras correctas fuera de posición
+    let letrasIncorrectas = 0; // Contador para letras incorrectas
 
     const palabrasMaquina = ["jazz", "blues", "rock", "Ovovivíparo", "Caleidoscopio", "rugby", "Desoxirribonucleico", "inteligencia artificial", "sevedol", "corazon","gimnasio","casa de barbie","baseball","musica country","raton","computador","alcohol","elefante","automovil","cuadernillo","proteina","carnaval","ventilador","adn","samurai"];
 
     function seleccionarPalabraMaquina() {
         return palabrasMaquina[Math.floor(Math.random() * palabrasMaquina.length)];
     }
+
+    document.getElementById('botonReiniciar').addEventListener('click', function() {
+        reiniciarJuego();
+    });
+
+    document.getElementById('botonIniciar').addEventListener('click', function() {
+        document.getElementById('imagen').classList.add('autoRotate');
+    });
+
+    document.getElementById('botonReiniciar').addEventListener('click', function() {
+        document.getElementById('imagen').classList.remove('autoRotate');
+    });
+
+    document.getElementById('botonReiniciarVictoria').addEventListener('click', function() {
+        document.getElementById('imagen').classList.remove('autoRotate');
+    });
+
 
     function registrarIntento(letra, posicion, solucionActual) {
         const intento = document.createElement('div');
@@ -41,8 +62,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function mostrarMensajeDerrota() {
-        const mensajeDerrota = document.getElementById('mensajeDerrota');
-        mensajeDerrota.style.display = 'block';
+        if (mensajeDerrota) {
+            mensajeDerrota.querySelector('p').textContent = 'El prisionero fue sometido a la pena capital.';
+            mensajeDerrota.style.display = 'block';
+        }
+        inputPalabraEnemiga.disabled = true;
+        botonIniciar.disabled = true;
         inputPosicion.disabled = true;
         botonesLetra.forEach(boton => {
             boton.disabled = true;
@@ -50,8 +75,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function mostrarMensajeVictoria() {
-        const mensajeVictoria = document.getElementById('mensajeVictoria');
-        mensajeVictoria.style.display = 'block';
+        if (mensajeVictoria) {
+            mensajeVictoria.querySelector('p').textContent = '¡Felicidades, salvaste al prisionero de su muerte!';
+            mensajeVictoria.style.display = 'block';
+        }
+        inputPalabraEnemiga.disabled = true;
+        botonIniciar.disabled = true;
         inputPosicion.disabled = true;
         botonesLetra.forEach(boton => {
             boton.disabled = true;
@@ -64,7 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('mensajeDerrota').style.display = 'none';
         document.getElementById('mensajeVictoria').style.display = 'none';
         inputPosicion.disabled = true;
-        registroIntentos.innerHTML = '';
+        const registros = document.querySelectorAll('#registroIntentos');
+        registros.forEach(registro => {
+            registro.innerHTML = '';
+        });
         enemigo = '';
         solucion = [];
         botonesLetra.forEach(boton => {

@@ -5,6 +5,7 @@
 .background {
     /* background-color: rgb(110, 110, 113); */
     display: flex;
+    width: 1900px;
     flex-direction: column;
     align-items: center;
     background-image: url("DALL·E\ 2025-02-22\ 14.47.13\ -\ A\ futuristic\ high-tech\ prison\ with\ a\ cyberpunk\ aesthetic.\ The\ design\ should\ feature\ glowing\ neon\ blue\ and\ purple\ lights\,\ metallic\ walls\ with\ holograph.webp");
@@ -15,32 +16,34 @@
 }
 
 .encabezado {
-    /* background-color: rgb(7, 7, 235); */
-    border: 2px solid black;
-    width: 100%;
-    height: 200px;
+    /* background-color: rgb(7, 7, 235);
+    border: 2px solid black; */
+    width: 1800px;
+    height: 400px;
     display: flex;
-    justify-content: space-around;
+    padding: 10px;
+    /* justify-content:space-around; */
 }
 
 .cardLogo {
-    width: 30%;
-    height: 200px;
-    border: 2px solid black;
+    width: 600px;
+    height: 400px;
+    /* height: 200px; */
+    /* border: 2px solid black; */
+    margin-left: 50px;
+    
 }
 
 .cardTitulo {
-    width: 300px;
-    height: 300px;
-    border: 2px solid black;
-    text-align: center;
-
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+    border: 4px solid rgba(23, 242, 213, 0.903);
+    transition: transform 0.3s ease;
 }
 
-.cardAnimacion {
-    width: 30%;
-    height: 200px;
-    border: 2px solid black;
+.cardTitulo:hover {
+    transform: scale(1.1);
 }
 
 .cardAnimacion {
@@ -77,23 +80,23 @@
 @keyframes autoShakeAnimation {
     0%{
         opacity: 0.2;
-        transform: translateY(-40px) translateX(-40px);
+        transform: translateY(-80px) translateX(-40px);
     }
     25% {
         opacity: 0.8;
-        transform: translateY(-20px) translateX(40px);
+        transform: translateY(-60px) translateX(40px);
     }
     50% {
         opacity: 1;
-        transform: translateY(0px) translateX(-40px);
+        transform: translateY(-40px) translateX(-40px);
     }
     75% {
         opacity: 0.8;
-        transform: translateY(20px) translateX(40px);
+        transform: translateY(-20px) translateX(40px);
     }
     100% {
         opacity: 0.2;
-        transform: translateY(40px) translateX(-40px);
+        transform: translateY(0px) translateX(-40px);
     }
     
 }
@@ -112,17 +115,18 @@
 
 .contenedorLore{
     /* background-color: rgb(7, 235, 216); */
-    border: 2px solid black;
-    width: 100%;
-    height: 150px;
+    /* border: 2px solid rgb(210, 17, 17); */
+    width: 1800px;
+    height: 300px;
     display: flex;
+    justify-content: space-around;
 }
 
 .boxAnimacion{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 100px;
-    margin-left: 55px;
-    margin-top: 10px;
+    margin-left: 0px;
+    margin-top: 0px;
     /* height: 200px; */
 }
 
@@ -134,7 +138,20 @@
     background-size: 100% 100%;
     border-radius: 10px;
     border: 4px solid rgb(195, 5, 125);
+    padding: 10px;
+    opacity: 0.7;
     /* opacity: 0.7; */
+}
+
+.instrucionesGenerales{
+    background-color: aqua;
+    font-size: 18px;
+    text-align: justify;
+    color: blueviolet;
+    border-radius: 10px;
+    border: 2px solid rgb(195, 5, 125);
+    padding: 5px;
+    opacity: 1;
 }
 
 .boxLore{
@@ -145,18 +162,30 @@
     background-size: 100% 100%;
     border-radius: 10px;
     border: 4px solid rgb(195, 5, 125);
-    /* opacity: 0.7; */
+    padding: 10px;
+    opacity: 0.7;
+}
+
+.loreTexto{
+    background-color: aqua;
+    font-size: 18px;
+    text-align: justify;
+    color: blueviolet;
+    border-radius: 10px;
+    border: 2px solid rgb(195, 5, 125);
+    padding: 5px;
+    opacity: 1;
 }
 
 .boxSonidos{
-    border: 2px solid black;
-    width: 25%;
+    /* border: 2px solid black; */
+    width: 100px;
     /* height: 200px; */
 }
 
 .containerJugar{
     width: 500px;
-    height: 150px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -167,6 +196,7 @@
 
 .botonPersona{
     margin: 20px;
+    
 }
 
 .botonMaquina{
@@ -183,13 +213,13 @@
 } */
 
 .linkFooter {    display: block; /* Hace que el enlace ocupe todo el ancho disponible */
-    height: 40px;
+    height: 50px;
     width: 250px;
     background-color: rgb(118, 65, 131);
     padding: 0; /* Elimina cualquier relleno adicional */
     color: cyan;
     margin: 0 auto; /* Centra el enlace horizontalmente */
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'Orbitron', sans-serif;
     border-radius: 5px;
     border: 2px solid cyan;
@@ -203,6 +233,10 @@
     background-color: rgb(100, 50, 120); /* Cambia el color de fondo al pasar el ratón */
 }
 
+
+.linkFooter:active {
+    transform: translateY(5px);
+}
 
 .soundControl {
     /* position: fixed; */
