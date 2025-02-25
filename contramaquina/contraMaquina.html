@@ -5,32 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahorcadopersona</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilospersona.css">
+    <link rel="stylesheet" href="estilosmaquina.css">
     
 </head>
 <body>
     <div class="background">
         <div class="encabezado">
             <div class="cardLogo">
-                <img class="logo" src="DALL·E 2025-02-22 14.27.15 - A futuristic logo for a game called 'Ahorcado Siglo XXXI'. The design should have a sleek, high-tech aesthetic with neon blue and purple glowing eleme.webp" alt="logo del juego">
+                <img class="logo" src="../imagenes/logosigloxxxi.webp" alt="logo del juego">
             </div>
             <div class="cardTitulo">
                 <h1 class="titulo">Ahorcado Siglo XXXI</h1>
-                <p class="pieParrafo">V.S. Persona</p>
+                <p class="pieParrafo">V.S. Maquina</p>
             </div>
             <div class="cardAnimacion">
                 <div class="engranajeAnimacion">
-                    <img src="engranajeanima.png" alt="png de engranaje futurista" width="300" height="300" id="imagen">
+                    <img src="../imagenes/engranajeanima.png" alt="png de engranaje futurista" width="300" height="300" id="imagen">
                 </div>
             </div>
         </div>
         <div class="campoEnemigo">
-            <div class="registroEnemigo">
+            <!-- <div class="registroEnemigo">
                 <input type="text"  id="palabraEnemiga" class="palabraEnemiga" placeholder="Ingresa la palabra">
                 <button class="ingresarEnemigo" id="ingresarEnemigo">Ingresar</button>            
-            </div>
+            </div> -->
             <div class="iniciarEnemigo">
-                <button class="botonEmpezar" id="botonIniciar" disabled>Empezar</button>
+                <button class="botonEmpezar" id="botonIniciar" >Empezar</button>
             </div>
             
         </div>
@@ -55,7 +55,7 @@
                 <button id="botonReiniciarVictoria">Reiniciar</button>
             </div>
             <div class="menuRegistro">
-                <audio id="clickSound" src="sonidos/deepscanmp3-14662.mp3" preload="auto"></audio>
+                <audio id="clickSound" src="../sonidos/deepscanmp3-14662.mp3" preload="auto"></audio>
                 <div class="registroIntentos" id="registroIntentos"></div>
             </div>
         </div>
@@ -97,15 +97,15 @@
         </div>
         
         <div class="containerNavegacion">
-            <button class="buttonFooter"><a href="index.html">volver</a></button>
+            <button class="buttonFooter"><a href="../index.html">volver</a></button>
             <button class="buttonFooter" id="footer" onclick="location.reload()">Reiniciar</button>
             <div class="soundControl">
                 <button id="toggleSound" class="buttonFooter" >🔊</button>
-                <audio id="backgroundMusic" src="sonidos/cyberpunk-bass-196030.mp3" preload="auto" autoplay loop></audio>
+                <audio id="backgroundMusic" src="../sonidos/cyberpunk-bass-196030.mp3" preload="auto" autoplay loop></audio>
             </div>
         </div>
     </div>
-    <script src="juegoAhorcado.js"></script>
-    <script src="audio.js"></script>
+    <script src="juegoAhorcadoMaquina.js"></script>
+    <script src="../sonidos/audio.js"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
     width: 1900px;
     flex-direction: column;
     align-items: center;
-    background-image: url("DALL·E\ 2025-02-22\ 14.47.13\ -\ A\ futuristic\ high-tech\ prison\ with\ a\ cyberpunk\ aesthetic.\ The\ design\ should\ feature\ glowing\ neon\ blue\ and\ purple\ lights\,\ metallic\ walls\ with\ holograph.webp");
+    background-image: url("imagenes/fondodepantalla.webp");
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -50,7 +50,7 @@
     width: 450px;
     height: 350px;
     /* border: 2px solid black; */
-    background-image: url(fondoengranaje.png);
+    background-image: url(imagenes/fondoengranaje.png);
     background-repeat: no-repeat;
     background-size: contain;
     padding-left: 90px;
@@ -133,7 +133,7 @@
 .boxInstruciones{
     width: 500px;
     height: 280px;
-    background-image: url(DALL·E\ 2025-02-22\ 14.51.37\ -\ A\ high-tech\ futuristic\ background\ designed\ for\ a\ website\ header.\ The\ design\ should\ feature\ glowing\ neon\ blue\ and\ purple\ elements\,\ holographic\ effects\,.webp);
+    background-image: url("imagenes/fondoinstrucciones.webp");
     background-repeat: no-repeat; 
     background-size: 100% 100%;
     border-radius: 10px;
@@ -157,7 +157,7 @@
 .boxLore{
     width: 500px;
     height: 280px;
-    background-image: url(fondoinstrucciones.webp);
+    background-image: url("imagenes/lorefondo.webp");
     background-repeat: no-repeat; 
     background-size: 100% 100%;
     border-radius: 10px;
